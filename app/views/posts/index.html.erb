@@ -13,7 +13,10 @@
 <div id="posts">
   <% @posts.each do |post| %>
     <div>
-      <%= link_to post.title, post %>
+      <%= post.id %>
+      <%= post.title %>
+      <%= post.body %>
+      <%= post.user.username if user_signed_in? %>
     </div>
   <% end %>
 </div>
