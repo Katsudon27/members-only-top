@@ -1,22 +1,41 @@
-<% if user_signed_in? %>
-  <%= link_to current_user.email, edit_user_registration_path %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Log in", new_user_session_path %>
-  <%= link_to "Register", new_user_registration_path %>
-<% end %>
-
-<h1>Posts</h1>
-
-<%= link_to "New post", new_post_path %>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <div>
-      <%= post.id %>
-      <%= post.title %>
-      <%= post.body %>
-      <%= post.user.username if user_signed_in? %>
-    </div>
-  <% end %>
+<div>
+  <ul>
+    <% if user_signed_in? %>
+      <li><%= link_to current_user.email, edit_user_registration_path %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "Log in", new_user_session_path %></li>
+      <li><%= link_to "Register", new_user_registration_path %></li>
+    <% end %>
+  </ul>
 </div>
+
+<div id="post-container">
+  <div id="title">
+    <h1>Posts</h1>
+    <%= link_to "New post", new_post_path %>
+  <div>
+
+  <div id="posts">
+    <table>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Body</th>
+      <% if user_signed_in? %>
+        <th>Author</th>
+      <% end %>
+
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.id %></td>
+          <td><%= post.title %></td>
+          <td><%= post.body %></td>
+
+          <% if user_signed_in? %>
+            <td><%= post.user.username %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+<div>
