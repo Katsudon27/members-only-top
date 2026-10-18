@@ -63,7 +63,8 @@ ul {
   justify-content: flex-end;
 }
 
-ul li a {
+ul li a,
+#title a {
   display: block;
   color: white;
   padding: 14px 16px;
@@ -71,7 +72,8 @@ ul li a {
   transition-duration: 0.3s;
 }
 
-ul li a:hover {
+ul li a:hover,
+#title a:hover {
   background-color: #FF4500;
 }
 
@@ -81,4 +83,16 @@ ul li a:hover {
   margin: auto;
   padding: 1rem 1.5rem;
   border-radius: 1.5rem;
+}
+
+#title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title a{
+  padding: 0.5rem;
+  background-color: #1C1C1C;
+  border-radius: 0.5rem;
 }
