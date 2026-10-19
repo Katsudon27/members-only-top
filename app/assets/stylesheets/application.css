@@ -64,7 +64,8 @@ ul {
 }
 
 ul li a,
-#title a {
+#title a,
+#back-link {
   display: block;
   color: white;
   padding: 14px 16px;
@@ -74,7 +75,8 @@ ul li a,
 
 ul li a:hover,
 #title a:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+#back-link:hover {
   background-color: #FF4500;
   color: #1C1C1C;
   cursor: pointer;
@@ -96,7 +98,8 @@ input[type="submit"]:hover {
 }
 
 #title a,
-input[type="submit"] {
+input[type="submit"],
+#back-link {
   padding: 0.5rem;
   background-color: #1C1C1C;
   border-radius: 0.5rem;
@@ -130,6 +133,14 @@ tr:nth-child(even) {
   margin-top: 4rem;
 }
 
+#form-container > form > div {
+  margin-top: 1rem;
+}
+
+#form-container > form > div > * {
+  width: 100%;
+}
+
 .field {
   margin-top: 1rem;
 }
@@ -150,7 +161,8 @@ tr:nth-child(even) {
   align-items: center;
 }
 
-input[type="submit"] {
+input[type="submit"],
+#back-link {
   margin-top: 1rem;
   width: auto;
   border: none;
@@ -181,4 +193,8 @@ input[type="submit"] {
 #devise-links a:hover {
   color: #FF4500;
   text-decoration: underline;
+}
+
+#back-link {
+  display: inline-block;
 }
