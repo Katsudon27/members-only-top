@@ -76,7 +76,8 @@ ul li a,
 ul li a:hover,
 #title a:hover,
 input[type="submit"]:hover,
-#back-link:hover {
+#back-link:hover,
+#cancel-account-section button:hover {
   background-color: #FF4500;
   color: #1C1C1C;
   cursor: pointer;
@@ -99,7 +100,8 @@ input[type="submit"]:hover,
 
 #title a,
 input[type="submit"],
-#back-link {
+#back-link,
+#cancel-account-section button {
   padding: 0.5rem;
   background-color: #1C1C1C;
   border-radius: 0.5rem;
@@ -161,7 +163,8 @@ tr:nth-child(even) {
 }
 
 input[type="submit"],
-#back-link {
+#back-link,
+#cancel-account-section button {
   margin-top: 1rem;
   width: auto;
   border: none;
@@ -196,4 +199,8 @@ input[type="submit"],
 
 #back-link {
   display: inline-block;
+}
+
+#cancel-account-section {
+  margin-top: 1rem;
 }
