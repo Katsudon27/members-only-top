@@ -152,10 +152,11 @@ tr:nth-child(even) {
 
 input[type="submit"] {
   margin-top: 1rem;
-  width: 20%;
+  width: auto;
   border: none;
   color: white;
   transition-duration: 0.2s;
+  padding: 0.5rem 1rem;
 }
 
 .actions {
