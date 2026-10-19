@@ -96,3 +96,26 @@ ul li a:hover,
   background-color: #1C1C1C;
   border-radius: 0.5rem;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  background-color: #FF4500;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #1C1C1C;
+  color: #dddddd;
+}
+
+tr:nth-child(even) {
+  background-color: #1C1C1C;
+  color: #dddddd;
+}
