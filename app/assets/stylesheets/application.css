@@ -73,11 +73,15 @@ ul li a,
 }
 
 ul li a:hover,
-#title a:hover {
+#title a:hover,
+input[type="submit"]:hover {
   background-color: #FF4500;
+  color: #1C1C1C;
+  cursor: pointer;
 }
 
-#post-container {
+#post-container,
+#form-container {
   background-color: #FFFFFF;
   width: 30%;
   margin: auto;
@@ -91,7 +95,8 @@ ul li a:hover,
   align-items: center;
 }
 
-#title a{
+#title a,
+input[type="submit"] {
   padding: 0.5rem;
   background-color: #1C1C1C;
   border-radius: 0.5rem;
@@ -118,4 +123,60 @@ th {
 tr:nth-child(even) {
   background-color: #1C1C1C;
   color: #dddddd;
+}
+
+#form-container {
+  width: 25%;
+  margin-top: 4rem;
+}
+
+.field {
+  margin-top: 1rem;
+}
+
+.field input {
+  width: 100%;
+}
+
+#remember-me-container {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  align-content: center;
+}
+
+#check-box-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="submit"] {
+  width: 20%;
+  border: none;
+  color: white;
+  transition-duration: 0.2s;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+#devise-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#devise-links a,
+#devise-links a:visited {
+  color: #1C1C1C;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+#devise-links a:hover {
+  color: #FF4500;
+  text-decoration: underline;
 }
